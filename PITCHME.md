@@ -1,3 +1,4 @@
+test
 # Implementation Bootcamp
 
 --- 
@@ -101,43 +102,43 @@ Risk Issues Decisions Actions Changes
 
 Risk 
 
-  - podem ou nao acontecer
-  - impacto no escopo
+- Podem ou não acontecer
+- Impacto no escopo
 
 +++
 
 Issue
 
- - Já aconteceu ou está acontecendo
- - Identificar a correção
+- Já aconteceu ou está acontecendo
+- Identificar a correção
 
 +++
 
 ### Scrum
 
-Create and PPM -> Requirements Workshop Output (stories) -> Organize Srpint -> Scrum activities
+Create and PPM -> Requirements Workshop Output (stories) -> Organize Sprint -> Scrum Activities
 -> Ready for testing and Go-Live
 
 +++ 
 
 
 **Project Management**
-- EM
-- Customer PM
+- Engagement Manager
+- Customer Product Manager
 
 +++
 
 **Scrum**
-- EM
-- TCs
+- Engagement Manager
+- Technical Consultant
 - Customer Process Owner
 - Customer Product Owner
 
 +++
 
 **Risk**
-- EM
-- TC
+- Engagement Manager
+- Technical Consultant
 - Some Customers
 
 ---
@@ -145,8 +146,8 @@ Create and PPM -> Requirements Workshop Output (stories) -> Organize Srpint -> S
 ## Plan Stage Guidelines
 
 - Setup do time
-- Onde treinar os ssadmins
-- Abordagem gerenciamento de instâncias, muito importante
+- Onde treinar os sysadmins
+- Abordar gerenciamento de instâncias
 - Configurar o StartNow.
 - Como fazer reunião de kickoff
 
@@ -167,7 +168,7 @@ Create and PPM -> Requirements Workshop Output (stories) -> Organize Srpint -> S
 - Review do plano de treinamento |
 - Review Onboarding plans |
 - Muito importante obter compromisso do cliente para o projeto. Um cliente que |
-  nao ajude durante a implantação é muito complicado. | 
+  Não ajude durante a implantação é muito complicado
 
 ---
 
@@ -197,7 +198,7 @@ Create and PPM -> Requirements Workshop Output (stories) -> Organize Srpint -> S
 +++
 
 Dependendo do contrato o cliente tem pelo menos 2 vagas gratuitas em
-treinamentos. Costumam ser 2 pessoas no sysadmin.
+treinamentos.
 
 No [servicenow.com/training](http://servicenow.com/training) é possível ver os treinamentos e certificações
 disponíves.
@@ -206,8 +207,8 @@ disponíves.
 
 #### Maneiras adicionais de engajamento
 - Community user groups
-- Product docs  |
-- **Developer Site** |
+- Product docs |
+- Developer Site |
 - Partner Portal |
 - ServiceNow training |
 - Social Media |
@@ -226,7 +227,7 @@ Dependendo da licença vai se ter 2 ou 3 instâncias.
 
 #### Clones
 
-Pode ser feito de prod para test ou do backup de prod para dev.
+Pode ser feito direto de prod para dev ou do *backup* de prod para dev.
 
 +++
 
@@ -237,30 +238,32 @@ para outra.
 
 ---
 
-**Develop Solution** -> **Test* Solution** -> **Go-Live**
+**Develop Solution** -> **Test Solution** -> **Go-Live**
 
 +++
 
 ##### Primeira Estratégia - Menos que Ideal
 
 1. Clonar Dev para Teste
-2. Clonar Test para Prod |
-3. Clonar Prod de volta para Dev e Test para sincronizar as instâncias. |
+2. Clonar Test para Prod 
+3. Clonar Prod de volta para Dev e Test para sincronizar as instâncias
 
++++
 
 ##### Segunda Estratégia - Um pouco mais Ideal
 
 1. Desenvolver em Prod antes do Go-Live
-2. Após clonar para Dev e Test. |
+2. Após clonar para Dev e Test
 
++++
 
 ##### Terceira Estratégia - Via US - Ideal
 
-Começar a desenvolver em dev com Update Sets e move-los individualmente.
+- Começar a desenvolver em dev com Update Sets e move-los individualmente |
+- Utilizar o módulo de stories e numerar os cards para fazer o update set |
+- Testes devem ser feitos em QA |
 
-Utliizar o módulo de stories e numerar os cards para fazer o update set.
-
-**Testes devem ser feitos em QA**
++++
 
 ### StartNow Implementation Group - Local
 
@@ -281,39 +284,167 @@ implementação. O grupo garante a role necessária para ter acesso à StartNow.
 
 Declaração clara e objetiva das expectativas e suposições.
 
++++
+
 #### O que deve ser mencionado ?
 
-- Vender a empresa e objetivos
-- Apresentar a filosofia da empresa sucintamente
-- Falar sobre metodologia StartNow
-- Rever como  o projeto será gerenciado
-- Importante que o cliente se apresente
+- Vender a empresa e objetivos |
+- Apresentar a filosofia da empresa sucintamente |
+- Falar sobre metodologia StartNow |
+- Rever como  o projeto será gerenciado |
+- Importante que o cliente se apresente |
 
-+++ 
+---
 
-#### Template de slides do kickoff
+## Sprints
 
-- **Falem da sua empresaa, porque estão aqui.**
-- Agenda
- - O que vai ser dicutido
-- Introdução
-- Apresenta a nossa equipe ServiceNow
-- Escopo
-- Objetivos do workshop e sua importância
-- Getting Started: possibilidades de como começar no ServiceNow (opcional)
-  - TODO List -> conta da wiki, logar no user group etc
-- Customer satisfaction program: um questionário sera enviado ao final da
-  implementação para os clientes para definir o score do time de implementação
-- **Apresentar metodologia StartNow**
-  - Explicar o que acontece em cada um dos planos
-  - O que ocorre em cada um das fases
-- Project Plan
-- SCRUM
-  - Como é a dinâmica
-  - Personagens envolvidos
-  - Como scrum se encaixa no startnow
-  - Hierarquia: release, produto , etc
-- RIDAC
-- Good Stories: explicar o que são, como fazer.
-- Próximos passos
-- Q&A
++++
+
+### Story Point Estimation
+
++++
+
+- Estimar apenas quando o usuário fornecer todas informações necessarías
+- Contingências: Variação de skill level |
+- Fase de testes |
+- Configuração da estória |
+- Tempo para fazer pesquisa |
+- Tempo para rever a estória |
+
++++
+
+#### Team Commitment
+
+Quantidades de pontos que o time vai conseguir entregar. Montar a sprint
+com estórias que somem esse número.
+
+--- 
+
+## Initial Configuration
+
++++
+
+### Guided Setups
+
+Wizard passo a passos com o setup
+
++++
+
+- Branding da instância
+- Timezone |
+- Formato da data |
+- Email properties |
+- LDAP Integration: alguns plugins são necessários |
+- SSO Integration |
+
++++
+
+### Importar Dados do Cliente
+
+Todas implementações vão requerer dados externos do clientes
+
++++
+
+#### Before importing any data
+
++++
+
+- Entender os dados que você está trazendo e onde eles devem ser colocados
+- Determinar as dependências e definir o coalesce |
+- Corrigir dados incorretos |
+- Perceber que nem todos dados disponíveis devem ser importados |
+
++++
+
+### LDAP
+
++++
+
+- Domínio
+- Credenciais |
+- Campo de leitura |
+- SNow nunca escreve no LDAP |
+
+---
+
+## Deploy
+
++++
+
+Trabalhar o backlog em uma série de Sprints menores para construir um Product
+Release Candidate.
+
++++
+
+### Meetings
+
+- Planeamento da Sprint
+- Diariamente as Stand up Meetings |
+- ACE/Sprint Review |
+- Retrospective |
+
++++
+
+Planning Meeting -> Knowledge Transfer -> Ace / Sprint Review -> Sprint Review
+& Retrospective
+
+---
+
+### Best Practices
+
++++
+
+Reports
+- Em grande número na home page podem afetar muito a performance
+
++++
+
+Loading Data
+- Abrimos um registro, os dados devem ser carregados
+- Muitos dot walkings vão afetar a performance |
+
++++
+
+Related Lists
+- Quanto mais pior a performance
+- Pode-se definir em que momento elas serão carregadas para melhor contornar
+  o tempo de carregamento |
+
++++
+
+Form Fields
+- Avois Unecessary Fields
+- Reference field that can be viewed from the reference icon should not be
+  added to the current form
+- Instead of hiding fields on a form for a certain groups of users, determine
+  if a separate view can be used instead
+- Avoid, where possible, adding fields that require a dot-walk to another table 
+
++++
+
+##### Grandes responsáveis pela performance
+
+Client Scripts
+Business Rules
+
++++
+
+**Avoid Open-Ended Queries**
+
+Query by `addQuery` or `addEncodedQuery` instead of nesting `if` statements
+
++++
+
+##### Limit Client side code execution
+
+- For performance reasons it is best to limit the amount of code executed on the
+client
+- When possible use UI Policies to only set a field to mandatory |
+- Control visibility and read-only of a field bby using ACLS which execute server side unless rules are dependant on client side activities |
+ 
+
++++
+
+- Restrict which users may customize homepages
+- Use dashboards
+- Schedule large reports to run outside buss hours
